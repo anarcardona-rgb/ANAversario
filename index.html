@@ -28,8 +28,22 @@
             text-align: center;
             margin-bottom: 20px;
             font-family: 'Lobster', cursive;
-            font-size: 48px;
-            color: #e303fc; /* lila que querías */
+            font-size: 60px;
+            color: #e303fc; /* lila fuerte */
+            background-color: rgba(227, 3, 252, 0.2); /* lila claro semitransparente */
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 15px;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background-color: #e303fc;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
         }
         .descripcion {
             text-align: center;
@@ -40,8 +54,8 @@
         .portada {
             display: block;
             margin: 0 auto 30px auto;
-            width: 250px;
-            height: 250px;
+            width: 350px;
+            height: 350px;
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0,0,0,0.7);
@@ -122,11 +136,6 @@
                 Tu navegador no soporta audio.
             </audio>
             <a href="cancion4.mp3" download class="descargar">Descargar</a>
-        </div>
-
-        <!-- Botón para descargar todas las canciones -->
-        <div class="descargar-todo">
-            <a href="ANAversario.zip" download class="descargar">Descargar todas las canciones</a>
         </div>
     </div>
 </body>

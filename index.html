@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANAversario</title>
+    <style>
+        /* Fondo con foto de vosotros y tipografía */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('fondoPareja.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(0,0,0,0.5); /* capa semitransparente para legibilidad */
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .descripcion {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        /* Portada cuadrada */
+        .portada {
+            display: block;
+            margin: 0 auto 30px auto;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .cancion {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .descargar {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #ff3366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .descargar:hover {
+            background-color: #ff6699;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ANAversario 🎶</h1>
+        <p class="descripcion">
+            Hola mi amor, hace un año te pedí que fueras mi novia con música y creo que ahora mismo la música es la única manera de expresar lo muchísimo que te quiero y lo feliz que estoy de haber cogido el camino que en un principio parecía difícil, espero que este sea el principio de muchísimos más años alucinantes a tu lado. <br> Te quiere, Ana
+        </p>
+        <img src="portadaAlbum.jpg" alt="Portada del álbum" class="portada">
+
+        <!-- Canción 1 -->
+        <div class="cancion">
+            <strong>Coge carrerilla</strong>
+            <audio controls>
+                <source src="cancion1.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+            <a href="cancion1.mp3" download class="descargar">Descargar</a>
+        </div>
+
+        <!-- Canción 2 -->
+        <div class="cancion">
+            <strong>Apodos</strong>
+            <audio controls>
+                <source src="cancion2.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+            <a href="cancion2.mp3" download class="descargar">Descargar</a>
+        </div>
+
+        <!-- Canción 3 -->
+        <div class="cancion">
+            <strong>Mi vida</strong>
+            <audio controls>
+                <source src="cancion3.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+            <a href="cancion3.mp3" download class="descargar">Descargar</a>
+        </div>
+
+        <!-- Canción 4 -->
+        <div class="cancion">
+            <strong>Despertar</strong>
+            <audio controls>
+                <source src="cancion4.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+            <a href="cancion4.mp3" download class="descargar">Descargar</a>
+        </div>
+
+    </div>
+</body>
+</html>

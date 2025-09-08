@@ -18,7 +18,7 @@ body {
     color: #fff;
 }
 
-/* Contenedor central */
+/* Contenedor principal flotante */
 .container {
     background-color: rgba(0,0,0,0.6);
     max-width: 900px;
@@ -26,18 +26,25 @@ body {
     padding: 30px 40px;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0,0,0,0.7);
-    text-align: center;
 }
 
-/* Título */
-header h1 {
+<style>
+  header h1 {
     font-family: 'Molle', cursive;
     font-size: 3.5em;
     color: #4c1d95;
-    margin: 0 0 15px 0;
+    margin: 0;
     text-shadow: 2px 2px #e9d5ff;
-}
+  }
 
+  @media (max-width: 767px) {
+    header h1 {
+      font-size: 4.5em;
+      text-align: center;
+    }
+  }
+</style>
+    
 header h1::after {
     content: '';
     display: block;
@@ -48,14 +55,15 @@ header h1::after {
     border-radius: 2px;
 }
 
-/* Descripción */
+/* Descripción inicial */
 .descripcion {
+    text-align: center;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
 
-/* Portada */
+/* Portada del álbum */
 .portada {
     display: block;
     margin: 0 auto 30px auto;
@@ -72,13 +80,13 @@ header h1::after {
     padding: 20px;
     background-color: rgba(255,255,255,0.1);
     border-radius: 12px;
-    text-align: center;
 }
 .cancion h2 {
     font-family: 'Limelight', cursive;
     font-size: 2em;
     color: #e303fc;
     margin-bottom: 10px;
+    text-align: center;
 }
 audio {
     width: 100%;
@@ -121,11 +129,11 @@ details p {
     line-height: 1.5;
 }
 
-/* Botón descargar todo */
+/* Botón de descarga de todo al final */
 .descargar-todo {
     display: block;
     text-align: center;
-    margin: 40px auto 0 auto;
+    margin-top: 40px;
     padding: 12px 25px;
     background-color: #9002a6;
     color: white;
@@ -133,12 +141,14 @@ details p {
     border-radius: 8px;
     font-family: 'Limelight', cursive;
     width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 .descargar-todo:hover {
     background-color: #e89ee4;
 }
 
-/* Media Queries: móviles */
+/* Media Queries: móvil */
 @media (max-width: 767px) {
     .container {
         margin: 20px;
@@ -146,6 +156,7 @@ details p {
     }
     header h1 {
         font-size: 36px;
+        padding: 10px 15px;
     }
     .descripcion {
         font-size: 16px;
@@ -171,6 +182,7 @@ details p {
     }
     header h1 {
         font-size: 48px;
+        padding: 12px 20px;
     }
     .descripcion {
         font-size: 17px;
@@ -186,7 +198,6 @@ details p {
 </style>
 </head>
 <body>
-
 <div class="container">
     <header>
         <h1>💖✨ANAversario✨💖</h1>
@@ -199,7 +210,7 @@ details p {
 
     <img src="portadaAlbum.png" alt="Portada del álbum" class="portada">
 
-    <!-- Canción 1 -->
+    <!-- Canciones -->
     <div class="cancion">
         <h2>Coge carrerilla</h2>
         <audio controls>
@@ -257,7 +268,6 @@ coge carrerilla y saltemos al mar
         </details>
     </div>
 
-    <!-- Canción 2 -->
     <div class="cancion">
         <h2>Apodos</h2>
         <audio controls>
@@ -332,7 +342,6 @@ CHITO
         </details>
     </div>
 
-    <!-- Canción 3 -->
     <div class="cancion">
         <h2>Mi vida</h2>
         <audio controls>
@@ -419,7 +428,6 @@ Ay sin descansar
         </details>
     </div>
 
-    <!-- Canción 4 -->
     <div class="cancion">
         <h2>Despertar</h2>
         <audio controls>
@@ -470,14 +478,11 @@ si el café algún día se llega a enfriar,
 entraré a mi hueco y encenderé una hoguera
 porque a tu lado siempre quiero despertar.
 En tu corazón…
-            </p>
+        </p>
         </details>
     </div>
 
-    <a href="todasLasCanciones.zip" download class="descargar-todo">Descargar todas las canciones</a>
-
 </div>
-
 </body>
 </html>
 

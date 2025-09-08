@@ -37,10 +37,17 @@ body {
     text-shadow: 2px 2px #e9d5ff;
   }
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     header h1 {
-      font-size: 4.5em;
-      text-align: center;
+      font-size: 5em; /* título más grande */
+    }
+    .container {
+      margin: 20px 10px; /* centrado y márgenes menores */
+      padding: 15px 20px; /* reduce padding para móviles */
+    }
+    h1::after {
+      width: 80px; /* ajusta la línea decorativa */
+      margin: 10px auto 0 auto;
     }
   }
 </style>

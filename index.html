@@ -9,43 +9,56 @@
   <style>
     body {
       font-family: 'Lexend', sans-serif;
-      background-color: #f3e8ff;
-      color: #333;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background: url('fondoPareja.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-    header {
-      background-color: #d8b4fe;
-      padding: 20px;
-      border-bottom: 5px solid #c084fc;
+    .container {
+      background-color: rgba(0,0,0,0.5); /* Contenedor semi-transparente */
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
     header h1 {
       font-family: 'Molle', cursive;
       font-size: 3.5em;
-      color: #4c1d95;
-      margin: 0;
-      text-shadow: 2px 2px #e9d5ff;
-    }
-    .cover {
-      width: 100%;
-      max-width: 600px;
-      margin: 20px auto;
+      color: #cb42f5; /* lila fuerte */
+      background-color: rgba(227, 3, 252, 0.2); /* lila claro semitransparente */
+      display: inline-block;
+      padding: 10px 20px;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-shadow: 2px 2px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .descripcion {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .portada {
+      display: block;
+      margin: 0 auto 30px auto;
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
     }
     .song {
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 700px;
-      background-color: #ede9fe;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 10px;
     }
     .song h2 {
       font-family: 'Limelight', cursive;
       font-size: 1.8em;
-      color: #6d28d9;
+      color: #e303fc;
       margin-bottom: 10px;
     }
     audio {
@@ -55,21 +68,21 @@
     .download-btn {
       font-family: 'Limelight', cursive;
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #a78bfa;
-      color: white;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #9002a6;
+      color: #fff;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
     .download-btn:hover {
-      background-color: #7c3aed;
+      background-color: #e89ee4;
     }
     details {
-      margin-top: 15px;
+      margin-top: 10px;
       text-align: left;
-      background-color: #c4b5fd;
+      background-color: rgba(196,181,253,0.8);
       color: #111;
       padding: 15px;
       border-radius: 10px;
@@ -84,34 +97,46 @@
     details p {
       font-family: 'Lexend', sans-serif;
       line-height: 1.5;
-      margin: 0;
       white-space: pre-line;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      header h1 { font-size: 2.5em; }
+      .portada { width: 250px; height: 250px; }
+      .container { margin: 20px; padding: 15px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>ANAversario</h1>
-  </header>
+  <div class="container">
+    <header>
+      <h1>💖✨ANAVERSARIO✨💖</h1>
+    </header>
 
-  <img src="cover.jpg" alt="Portada" class="cover">
+    <p class="descripcion">
+      Hola mi amor, hace un año te pedí que fueras mi novia con música y creo que ahora mismo la música es la única manera de expresar lo muchísimo que te quiero y lo feliz que estoy de haber cogido el camino que en un principio parecía difícil, espero que este sea el principio de muchísimos más años alucinantes a tu lado. <br> Te quiere, Ana
+    </p>
 
-  <!-- Canción 1 -->
-  <div class="song">
-    <h2>Coge carrerilla</h2>
-    <audio controls>
-      <source src="cancion1.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-    <a href="cancion1.mp3" download class="download-btn">Descargar</a>
-    <details>
-      <summary>Ver letra</summary>
-      <p>
+    <img src="portadaAlbum.png" alt="Portada del álbum" class="portada">
+
+    <!-- Canción 1 -->
+    <div class="song">
+      <h2>Coge carrerilla</h2>
+      <audio controls>
+        <source src="cancion1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+      <a href="cancion1.mp3" download class="download-btn">Descargar</a>
+      <details>
+        <summary>Ver letra</summary>
+        <p>
 Éramos amigas nadando en la orilla,
 mirando de lejos lo que iba a pasar. 
 Subimos montañas que antes daban miedo, 
 juntas descubrimos qué rumbo tomar.
- 
+
 Pasamos tormentas, dudas en silencio, 
 el destino a veces nos quiso separar. 
 Pero en tu sonrisa encontré mi puerto, 
@@ -151,21 +176,21 @@ Y todo contigo, coge carrerilla-aaaaaah
 aaaaaaah 
 contigo, aaaaah
 coge carrerilla y saltemos al mar
-      </p>
-    </details>
-  </div>
+        </p>
+      </details>
+    </div>
 
-  <!-- Canción 2 -->
-  <div class="song">
-    <h2>Apodos</h2>
-    <audio controls>
-      <source src="cancion2.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-    <a href="cancion2.mp3" download class="download-btn">Descargar</a>
-    <details>
-      <summary>Ver letra</summary>
-      <p>
+    <!-- Canción 2 -->
+    <div class="song">
+      <h2>Apodos</h2>
+      <audio controls>
+        <source src="cancion2.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+      <a href="cancion2.mp3" download class="download-btn">Descargar</a>
+      <details>
+        <summary>Ver letra</summary>
+        <p>
 Nunca usaba nombres ñoños,
 todos me daban pereza,
 el amor era una mierda
@@ -227,21 +252,21 @@ CHITO
 CHITO
 CHITO
 CHITO
-      </p>
-    </details>
-  </div>
+        </p>
+      </details>
+    </div>
 
-  <!-- Canción 3 -->
-  <div class="song">
-    <h2>Mi vida</h2>
-    <audio controls>
-      <source src="cancion3.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-    <a href="cancion3.mp3" download class="download-btn">Descargar</a>
-    <details>
-      <summary>Ver letra</summary>
-      <p>
+    <!-- Canción 3 -->
+    <div class="song">
+      <h2>Mi vida</h2>
+      <audio controls>
+        <source src="cancion3.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+      <a href="cancion3.mp3" download class="download-btn">Descargar</a>
+      <details>
+        <summary>Ver letra</summary>
+        <p>
 ayyyyyy, mi vida entera 
 (ayyy mi vida entera)
 ayyyyyy, mi cosa linda
@@ -320,22 +345,21 @@ Abajo y arriba
 En tierra y en mar
 En cielo y estrellas
 Ay sin descansar
-      </p>
-    </details>
-  </div>
+        </p>
+      </details>
+    </div>
 
-  <!-- Canción 4 -->
-  <div class="song">
-    <h2>Despertar</h2>
-    <audio controls>
-      <source src="cancion4.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-    <a href="cancion4.mp3" download class="download-btn">Descargar</a>
-    <details>
-      <summary>Ver letra</summary>
-      <p>
-
+    <!-- Canción 4 -->
+    <div class="song">
+      <h2>Despertar</h2>
+      <audio controls>
+        <source src="cancion4.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+      <a href="cancion4.mp3" download class="download-btn">Descargar</a>
+      <details>
+        <summary>Ver letra</summary>
+        <p>
 Despierto contigo entre luces suaves,
 y el mundo empieza a respirar.
 Tus manos buscan mis dedos despacio,
@@ -377,8 +401,10 @@ si el café algún día se llega a enfriar,
 entraré a mi hueco y encenderé una hoguera
 porque a tu lado siempre quiero despertar.
 En tu corazón…
-      </p>
-    </details>
+        </p>
+      </details>
+    </div>
   </div>
 </body>
 </html>
+

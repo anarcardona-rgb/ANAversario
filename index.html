@@ -6,7 +6,7 @@
     <title>ANAversario</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Bubble+Pop&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -27,10 +27,10 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            font-family: 'Lobster', cursive;
-            font-size: 60px;
-            color: #ffb3fb; /* lila fuerte */
-            background-color: rgba(227, 3, 252, 0.2); /* lila claro semitransparente */
+            font-family: 'DM Bubble Pop', cursive;
+            font-size: 50px;
+            color: #cb42f5;
+            background-color: rgba(227, 3, 252, 0.2);
             display: inline-block;
             padding: 10px 20px;
             border-radius: 15px;
@@ -54,8 +54,9 @@
         .portada {
             display: block;
             margin: 0 auto 30px auto;
-            width: 350px;
-            height: 350px;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0,0,0,0.7);
@@ -83,10 +84,35 @@
         .descargar:hover {
             background-color: #e89ee4;
         }
-        .descargar-todo {
-            display: block;
-            text-align: center;
-            margin-top: 40px;
+        .accordion {
+            margin-top: 15px;
+        }
+        .accordion button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5a0075;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.3s;
+        }
+        .accordion button:hover {
+            background-color: #9002a6;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: rgba(203, 66, 245, 0.1);
+            border-left: 3px solid #cb42f5;
+            border-radius: 8px;
+            color: #fff;
+            white-space: pre-line;
+            font-size: 15px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -106,6 +132,65 @@
                 Tu navegador no soporta audio.
             </audio>
             <a href="cancion1.mp3" download class="descargar">Descargar</a>
+            <div class="accordion">
+                <button onclick="toggleLyrics(this)">📖 Ver letra</button>
+                <div class="accordion-content">
+Coge carrerilla
+[Verse 1] 
+Éramos amigas nadando en la orilla,
+mirando de lejos lo que iba a pasar. 
+Subimos montañas que antes daban miedo, 
+juntas descubrimos qué rumbo tomar.
+
+[Verse 2] 
+Pasamos tormentas, dudas en silencio, 
+el destino a veces nos quiso separar. 
+Pero en tu sonrisa encontré mi puerto, 
+y ahora viento en popa me atrevo a navegar.
+
+[Verse 3]
+Me pierdo a menudo en la luz de tus ojos, 
+parece que sabes leerme la piel. 
+Con solo mirarme descifras mis sombras, 
+ya no está oscuro, y todo va bien. 
+
+[Verse 3]
+Piérdete conmigo muy poquito a poco, 
+Me gustas, tú sabes leerme la piel. 
+Con solo mirarme mi mundo va loco, 
+colores y ritmo, todo del revés. 
+
+[Pre-Chorus] 
+Tírate conmigo al agua de cabeza,
+Dame la mano y saltemos al mar.
+Tenerte cerca me vuelve valiente,
+no hay miedo, es deseo de vivir y explorar.
+
+[Chorus] 
+Contigo la vida se siente distinta, 
+contigo la duda se vuelve caricia. 
+Contigo los días encajan sin prisa,
+Y todo contigo, coge carrerilla
+aaaaaah
+
+[Bridge]
+Si tropiezo me curas la herida, 
+sí me pierdo me sabes guiar. 
+La rutina se disfraza de fiesta
+cuando bailas conmigo al andar. 
+
+[Chorus] 
+Contigo la vida se siente distinta, 
+contigo la duda se vuelve caricia. 
+Contigo los días encajan sin prisa,
+Y todo contigo, coge carrerilla-aaaaaah
+
+[Outro]
+aaaaaaah 
+contigo, aaaaah
+coge carrerilla y saltemos al mar
+                </div>
+            </div>
         </div>
 
         <!-- Canción 2 -->
@@ -116,6 +201,82 @@
                 Tu navegador no soporta audio.
             </audio>
             <a href="cancion2.mp3" download class="descargar">Descargar</a>
+            <div class="accordion">
+                <button onclick="toggleLyrics(this)">📖 Ver letra</button>
+                <div class="accordion-content">
+Apodos
+[Verse 1]
+Nunca usaba nombres ñoños,
+todos me daban pereza,
+el amor era una mierda
+y mi hermano empalagoso.
+
+Los cuentos eran mentira,
+mucho drama y poca risa
+y por mucho que leyeran
+yo nunca me los creía
+
+[Pre-chorus]
+Pero ahora, no sé lo que me haces, 
+estoy pegajosa como un calipo.
+Pero ahora, no sé lo que me haces,
+estoy atontada como un mosquito.
+Pero ahora, no sé lo que me haces,
+estoy empanada con huevo frito.
+Ahora ya, no sé qué has hecho,
+respondo a todo eeeeesto:
+
+[Chorus]
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+
+[Instrumental]
+
+[Verse 2]
+Cuando me llegan tus mensajes,
+me choco contra las farolas,
+ya no puedo ser una hater,
+si soy igual contigo a solas.
+
+Antes mi plan era dar miedo,
+ser misteriosa y reservada
+no me salía si no estabas
+y ahora con esto mucho menos.
+
+[Pre-chorus]
+Pero ahora, no sé lo que me haces, 
+estoy pegajosa como un calipo.
+Pero ahora, no sé lo que me haces,
+estoy atontada como un mosquito.
+Pero ahora, no sé lo que me haces,
+estoy empanada con huevo frito.
+Ahora ya, no sé qué me has hecho,
+respondo a todo eeeeesto:
+
+[Chorus]
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+Amor, mor,  mor, morchito
+cosita, cosa, bolita, bichito.
+
+[Outro]
+AAAAAA-MOOOOOR-
+CHITO
+CHITO
+CHITO
+CHITO
+                </div>
+            </div>
         </div>
 
         <!-- Canción 3 -->
@@ -126,6 +287,105 @@
                 Tu navegador no soporta audio.
             </audio>
             <a href="cancion3.mp3" download class="descargar">Descargar</a>
+            <div class="accordion">
+                <button onclick="toggleLyrics(this)">📖 Ver letra</button>
+                <div class="accordion-content">
+Mi vida
+[Chorus]
+ayyyyyy, mi vida entera 
+(ayyy mi vida entera)
+ayyyyyy, mi cosa linda
+(ayyy mi cosa linda)
+ayyyyyyy, si no estuvieras
+(si no estuvieras, no)
+yooooooo te buscaría
+(si, te buscaría)
+
+Abajo y arriba
+En tierra y en mar
+En cielo y estrellas
+Ay sin descansar
+
+[Verse 1]
+Porque lo eres todo,
+Todo para mí,
+Aire que respiro,
+Nana pa' dormir.
+
+[Verse 2]
+Eres horizontes,
+noches de verano
+calor en invierno
+canción al piano.
+
+[Chorus]
+ayyyyyy, mi vida entera 
+(ayyy mi vida entera)
+ayyyyyy, mi cosa linda
+(ayyy mi cosa linda)
+Ayyyyyyy
+
+Abajo y arriba
+En tierra y en mar
+En cielo y estrellas
+Ay sin descansar
+
+[Instrumental]
+
+[Verse 3]
+Eres mi angelito
+noches de locura,
+si pierdo equilibrio,
+tus besos me curan
+
+[Verse 2]
+Eres horizontes,
+noches de verano
+calor en invierno
+canción al piano.
+
+[Chorus]
+ayyyyyy, mi vida entera 
+(ayyy mi vida entera)
+ayyyyyy, mi cosa linda
+(ayyy mi cosa linda)
+Ayyyyyyy
+
+Abajo y arriba
+En tierra y en mar
+En cielo y estrellas
+Ay sin descansar
+
+[Instrumental]
+
+[Bridge]
+Si tu fueras agua,
+(limpia y clara)
+y yo en el desierto
+(al sol seco)
+no te bebería,
+(ni en mil días)
+pa' ver tu reflejo.
+(siempre ohhh)
+
+[Chorus]
+ayyyyyy, mi vida entera 
+(ayyy mi vida entera)
+ayyyyyy, mi cosa linda
+(ayyy mi cosa linda)
+ayyyyyyy, si no estuvieras
+(si no estuvieras, no)
+yooooooo te buscaría
+(si, te buscaría)
+
+Abajo y arriba
+En tierra y en mar
+En cielo y estrellas
+Ay sin descansar
+
+[Instrumental]
+                </div>
+            </div>
         </div>
 
         <!-- Canción 4 -->
@@ -136,7 +396,76 @@
                 Tu navegador no soporta audio.
             </audio>
             <a href="cancion4.mp3" download class="descargar">Descargar</a>
+            <div class="accordion">
+                <button onclick="toggleLyrics(this)">📖 Ver letra</button>
+                <div class="accordion-content">
+Despertar
+[Verse 1]
+Despierto contigo entre luces suaves,
+y el mundo empieza a respirar.
+Tus manos buscan mis dedos despacio,
+tus ojos aún quieren descansar.
+
+[Verse 2]
+Un beso en la mejilla,
+Un te quiero con sueño,
+pospón la alarma, un ratito más.
+Las flores del balcón saludan la mañana,
+mi flor favorita, me vuelve a mirar.
+
+[Chorus]
+Despierto en el sol de tu mirada,
+descanso en la cuna de tu piel,
+vivo al compás del latido de tu pecho,
+acurrucada en un hueco de tu corazón.
+
+[Verse 3]
+Nos reímos de cosas pequeñas y simples,
+el café humea en su ritual.
+El tiempo nos pone a prueba a su manera,
+pero tu sonrisa me hace continuar.
+
+[Bridge]
+Si tropiezo con prisas o con las horas,
+si los planes cambian al caminar,
+seguiré tu ritmo y meceré tus sueños,
+porque a tu lado quiero despertar.
+
+[Chorus]
+Despierto en el sol de tu mirada,
+descanso en la cuna de tu piel,
+vivo al compás del latido de tu pecho,
+acurrucada en un hueco de tu corazón.
+
+[Verse 4]
+Mis minutos son magia si escucho tu risa
+si las letras las inventas al cantar,
+el tiempo pasa volando y ya no avisa,
+Ojalá poderte siempre disfrutar.
+
+[Outro]
+Si tras cientos de giros sobre esta tierra,
+si el café algún día se llega a enfriar,
+entraré a mi hueco y encenderé una hoguera
+porque a tu lado siempre quiero despertar.
+En tu corazón…
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleLyrics(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                button.textContent = "📖 Ver letra";
+            } else {
+                content.style.display = "block";
+                button.textContent = "📕 Ocultar letra";
+            }
+        }
+    </script>
 </body>
 </html>
+

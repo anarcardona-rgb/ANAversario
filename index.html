@@ -18,6 +18,7 @@ body {
     color: #fff;
 }
 
+/* Contenedor central */
 .container {
     background-color: rgba(0,0,0,0.6);
     max-width: 900px;
@@ -25,16 +26,18 @@ body {
     padding: 30px 40px;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    text-align: center;
 }
 
-  header h1 {
+/* Título */
+header h1 {
     font-family: 'Molle', cursive;
     font-size: 3.5em;
     color: #4c1d95;
-    margin: 0;
+    margin: 0 0 15px 0;
     text-shadow: 2px 2px #e9d5ff;
-  }
-   
+}
+
 header h1::after {
     content: '';
     display: block;
@@ -44,30 +47,15 @@ header h1::after {
     margin: 10px auto 0 auto;
     border-radius: 2px;
 }
-    
-@media (max-width: 767px) {
-    header h1 {
-      font-size: 5em; /* título más grande */
-    }
-    .container {
-      margin: 20px 10px; /* centrado y márgenes menores */
-      padding: 15px 20px; /* reduce padding para móviles */
-    }
-    h1::after {
-      width: 80px; /* ajusta la línea decorativa */
-      margin: 10px auto 0 auto;
-    }
-  }
-</style>
-    
+
+/* Descripción */
 .descripcion {
-    text-align: center;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
 
-/* Portada del álbum */
+/* Portada */
 .portada {
     display: block;
     margin: 0 auto 30px auto;
@@ -84,13 +72,13 @@ header h1::after {
     padding: 20px;
     background-color: rgba(255,255,255,0.1);
     border-radius: 12px;
+    text-align: center;
 }
 .cancion h2 {
     font-family: 'Limelight', cursive;
     font-size: 2em;
     color: #e303fc;
     margin-bottom: 10px;
-    text-align: center;
 }
 audio {
     width: 100%;
@@ -133,11 +121,11 @@ details p {
     line-height: 1.5;
 }
 
-/* Botón de descarga de todo al final */
+/* Botón descargar todo */
 .descargar-todo {
     display: block;
     text-align: center;
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
     padding: 12px 25px;
     background-color: #9002a6;
     color: white;
@@ -145,14 +133,12 @@ details p {
     border-radius: 8px;
     font-family: 'Limelight', cursive;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
 }
 .descargar-todo:hover {
     background-color: #e89ee4;
 }
 
-/* Media Queries: móvil */
+/* Media Queries: móviles */
 @media (max-width: 767px) {
     .container {
         margin: 20px;
@@ -160,7 +146,6 @@ details p {
     }
     header h1 {
         font-size: 36px;
-        padding: 10px 15px;
     }
     .descripcion {
         font-size: 16px;
@@ -186,7 +171,6 @@ details p {
     }
     header h1 {
         font-size: 48px;
-        padding: 12px 20px;
     }
     .descripcion {
         font-size: 17px;

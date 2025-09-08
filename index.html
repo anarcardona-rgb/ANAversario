@@ -18,7 +18,6 @@ body {
     color: #fff;
 }
 
-/* Contenedor principal flotante */
 .container {
     background-color: rgba(0,0,0,0.6);
     max-width: 900px;
@@ -36,7 +35,17 @@ body {
     margin: 0;
     text-shadow: 2px 2px #e9d5ff;
   }
-
+   
+header h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background-color: #e303fc;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+    
 @media (max-width: 767px) {
     header h1 {
       font-size: 5em; /* título más grande */
@@ -52,17 +61,6 @@ body {
   }
 </style>
     
-header h1::after {
-    content: '';
-    display: block;
-    width: 120px;
-    height: 4px;
-    background-color: #e303fc;
-    margin: 10px auto 0 auto;
-    border-radius: 2px;
-}
-
-/* Descripción inicial */
 .descripcion {
     text-align: center;
     font-size: 18px;

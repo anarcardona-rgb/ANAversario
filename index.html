@@ -1,137 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANAversario</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Limelight&family=Lexend&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Lexend', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('fondoPareja.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANAversario</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Limelight&family=Lexend&display=swap" rel="stylesheet">
+
+<style>
+/* Fondo general */
+body {
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    background: url('fondoPareja.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Contenedor central */
+.container {
+    background-color: rgba(0,0,0,0.6);
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+/* Título */
+header h1 {
+    font-family: 'Molle', cursive;
+    font-size: 3.5em;
+    color: #4c1d95;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px #e9d5ff;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background-color: #e303fc;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Descripción */
+.descripcion {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Portada */
+.portada {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* Canciones */
+.cancion {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+.cancion h2 {
+    font-family: 'Limelight', cursive;
+    font-size: 2em;
+    color: #e303fc;
+    margin-bottom: 10px;
+}
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+.descargar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #9002a6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Limelight', cursive;
+    transition: background 0.3s;
+}
+.descargar:hover {
+    background-color: #e89ee4;
+}
+
+/* Letras desplegables */
+details {
+    margin-top: 15px;
+    text-align: left;
+    background-color: rgba(227,3,252,0.2);
+    color: #111;
+    padding: 15px;
+    border-radius: 10px;
+}
+details summary {
+    font-family: 'Limelight', cursive;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #cb42f5;
+}
+details p {
+    font-family: 'Lexend', sans-serif;
+    white-space: pre-line;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Botón descargar todo */
+.descargar-todo {
+    display: block;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    padding: 12px 25px;
+    background-color: #9002a6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Limelight', cursive;
+    width: fit-content;
+}
+.descargar-todo:hover {
+    background-color: #e89ee4;
+}
+
+/* Media Queries: móviles */
+@media (max-width: 767px) {
     .container {
-      background-color: rgba(0,0,0,0.5); /* Contenedor semi-transparente */
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        margin: 20px;
+        padding: 20px;
     }
     header h1 {
-      font-family: 'Molle', cursive;
-      font-size: 3.5em;
-      color: #cb42f5; /* lila fuerte */
-      background-color: rgba(227, 3, 252, 0.2); /* lila claro semitransparente */
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 15px;
-      text-shadow: 2px 2px rgba(0,0,0,0.3);
-      margin-bottom: 20px;
+        font-size: 36px;
     }
     .descripcion {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 17px;
-      line-height: 1.6;
+        font-size: 16px;
     }
     .portada {
-      display: block;
-      margin: 0 auto 30px auto;
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+        width: 250px;
+        height: 250px;
     }
-    .song {
-      margin-bottom: 25px;
-      padding: 15px;
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 10px;
+    .cancion h2 {
+        font-size: 1.5em;
     }
-    .song h2 {
-      font-family: 'Limelight', cursive;
-      font-size: 1.8em;
-      color: #e303fc;
-      margin-bottom: 10px;
+    .descargar, .descargar-todo {
+        padding: 8px 15px;
+        font-size: 1em;
     }
-    audio {
-      width: 100%;
-      margin-top: 10px;
-    }
-    .download-btn {
-      font-family: 'Limelight', cursive;
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background-color: #9002a6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    .download-btn:hover {
-      background-color: #e89ee4;
-    }
-    details {
-      margin-top: 10px;
-      text-align: left;
-      background-color: rgba(196,181,253,0.8);
-      color: #111;
-      padding: 15px;
-      border-radius: 10px;
-    }
-    details summary {
-      font-family: 'Limelight', cursive;
-      font-size: 1.2em;
-      cursor: pointer;
-      color: #4c1d95;
-      margin-bottom: 10px;
-    }
-    details p {
-      font-family: 'Lexend', sans-serif;
-      line-height: 1.5;
-      white-space: pre-line;
-      margin: 0;
-    }
+}
 
-    /* Responsive */
-    @media(max-width:600px){
-      header h1 { font-size: 2.5em; }
-      .portada { width: 250px; height: 250px; }
-      .container { margin: 20px; padding: 15px; }
+/* Media Queries: tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 30px;
+        padding: 25px;
     }
-  </style>
+    header h1 {
+        font-size: 48px;
+    }
+    .descripcion {
+        font-size: 17px;
+    }
+    .portada {
+        width: 300px;
+        height: 300px;
+    }
+    .cancion h2 {
+        font-size: 1.8em;
+    }
+}
+</style>
 </head>
 <body>
-  <div class="container">
+
+<div class="container">
     <header>
-      <h1>💖✨ANAVERSARIO✨💖</h1>
+        <h1>💖✨ANAversario✨💖</h1>
     </header>
 
     <p class="descripcion">
-      Hola mi amor, hace un año te pedí que fueras mi novia con música y creo que ahora mismo la música es la única manera de expresar lo muchísimo que te quiero y lo feliz que estoy de haber cogido el camino que en un principio parecía difícil, espero que este sea el principio de muchísimos más años alucinantes a tu lado. <br> Te quiere, Ana
+        Hola mi amor, hace un año te pedí que fueras mi novia con música y creo que ahora mismo la música es la única manera de expresar lo muchísimo que te quiero y lo feliz que estoy de haber cogido el camino que en un principio parecía difícil, espero que este sea el principio de muchísimos más años alucinantes a tu lado.<br>
+        Te quiere, Ana
     </p>
 
     <img src="portadaAlbum.png" alt="Portada del álbum" class="portada">
 
     <!-- Canción 1 -->
-    <div class="song">
-      <h2>Coge carrerilla</h2>
-      <audio controls>
-        <source src="cancion1.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-      </audio>
-      <a href="cancion1.mp3" download class="download-btn">Descargar</a>
-      <details>
-        <summary>Ver letra</summary>
-        <p>
+    <div class="cancion">
+        <h2>Coge carrerilla</h2>
+        <audio controls>
+            <source src="cancion1.mp3" type="audio/mpeg">
+        </audio>
+        <a href="cancion1.mp3" download class="descargar">Descargar</a>
+        <details>
+            <summary>Ver letra</summary>
+            <p>
 Éramos amigas nadando en la orilla,
 mirando de lejos lo que iba a pasar. 
 Subimos montañas que antes daban miedo, 
@@ -176,21 +253,20 @@ Y todo contigo, coge carrerilla-aaaaaah
 aaaaaaah 
 contigo, aaaaah
 coge carrerilla y saltemos al mar
-        </p>
-      </details>
+            </p>
+        </details>
     </div>
 
     <!-- Canción 2 -->
-    <div class="song">
-      <h2>Apodos</h2>
-      <audio controls>
-        <source src="cancion2.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-      </audio>
-      <a href="cancion2.mp3" download class="download-btn">Descargar</a>
-      <details>
-        <summary>Ver letra</summary>
-        <p>
+    <div class="cancion">
+        <h2>Apodos</h2>
+        <audio controls>
+            <source src="cancion2.mp3" type="audio/mpeg">
+        </audio>
+        <a href="cancion2.mp3" download class="descargar">Descargar</a>
+        <details>
+            <summary>Ver letra</summary>
+            <p>
 Nunca usaba nombres ñoños,
 todos me daban pereza,
 el amor era una mierda
@@ -252,21 +328,20 @@ CHITO
 CHITO
 CHITO
 CHITO
-        </p>
-      </details>
+            </p>
+        </details>
     </div>
 
     <!-- Canción 3 -->
-    <div class="song">
-      <h2>Mi vida</h2>
-      <audio controls>
-        <source src="cancion3.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-      </audio>
-      <a href="cancion3.mp3" download class="download-btn">Descargar</a>
-      <details>
-        <summary>Ver letra</summary>
-        <p>
+    <div class="cancion">
+        <h2>Mi vida</h2>
+        <audio controls>
+            <source src="cancion3.mp3" type="audio/mpeg">
+        </audio>
+        <a href="cancion3.mp3" download class="descargar">Descargar</a>
+        <details>
+            <summary>Ver letra</summary>
+            <p>
 ayyyyyy, mi vida entera 
 (ayyy mi vida entera)
 ayyyyyy, mi cosa linda
@@ -318,11 +393,6 @@ ayyyyyy, mi cosa linda
 (ayyy mi cosa linda)
 Ayyyyyyy
 
-Abajo y arriba
-En tierra y en mar
-En cielo y estrellas
-Ay sin descansar
-
 Si tu fueras agua,
 (limpia y clara)
 y yo en el desierto
@@ -345,21 +415,20 @@ Abajo y arriba
 En tierra y en mar
 En cielo y estrellas
 Ay sin descansar
-        </p>
-      </details>
+            </p>
+        </details>
     </div>
 
     <!-- Canción 4 -->
-    <div class="song">
-      <h2>Despertar</h2>
-      <audio controls>
-        <source src="cancion4.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-      </audio>
-      <a href="cancion4.mp3" download class="download-btn">Descargar</a>
-      <details>
-        <summary>Ver letra</summary>
-        <p>
+    <div class="cancion">
+        <h2>Despertar</h2>
+        <audio controls>
+            <source src="cancion4.mp3" type="audio/mpeg">
+        </audio>
+        <a href="cancion4.mp3" download class="descargar">Descargar</a>
+        <details>
+            <summary>Ver letra</summary>
+            <p>
 Despierto contigo entre luces suaves,
 y el mundo empieza a respirar.
 Tus manos buscan mis dedos despacio,
@@ -401,9 +470,13 @@ si el café algún día se llega a enfriar,
 entraré a mi hueco y encenderé una hoguera
 porque a tu lado siempre quiero despertar.
 En tu corazón…
-        </p>
-      </details>
+            </p>
+        </details>
     </div>
-  </div>
+
+    <a href="todasLasCanciones.zip" download class="descargar-todo">Descargar todas las canciones</a>
+
+</div>
+
 </body>
 </html>
